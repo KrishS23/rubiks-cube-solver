@@ -1,15 +1,8 @@
-//
-// Created by Lakshya Mittal on 22-12-2021.
-//
 
 #include "RubiksCube.h"
 
 class RubiksCube1dArray : public RubiksCube {
 private:
-
-    /*
-     * Given a face index, row and col, return it's flattened index
-     */
     static inline int getIndex(int ind, int row, int col) {
         return (ind * 9) + (row * 3) + col;
     }
