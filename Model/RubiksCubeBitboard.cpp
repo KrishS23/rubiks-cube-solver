@@ -27,7 +27,6 @@ private:
         bitboard[s1] = (bitboard[s1] & ~(one_8 << (8 * s1_3))) | (clr3 << (8 * s1_3));
     }
 
-//    Helper to getCorners()
     int get5bitCorner(string corner) {
         int ret = 0;
         string actual_str;
@@ -60,15 +59,6 @@ private:
         }
         return ret;
     }
-
-//    This function was used for testing / printing
-
-//    void print5bitbin(int a){
-//        for(int i=4; i>=0; i--){
-//            if(a & (1 << i)) cout << 1;
-//            else cout << 0;
-//        }
-//    }
 
 public:
     uint64_t bitboard[6]{};
@@ -375,17 +365,6 @@ public:
 
         ret |= get5bitCorner(bottom_back_left);
         ret = ret << 5;
-
-//        Following was used for Testing / Printing
-
-//        cout << top_front_right << " "; print5bitbin(get5bitCorner(top_front_right )); cout  << "\n";
-//        cout << top_front_left << " "; print5bitbin(get5bitCorner(top_front_left )); cout << "\n";
-//        cout << top_back_right << " "; print5bitbin(get5bitCorner(top_back_right )); cout << "\n";
-//        cout << top_back_left  << " "; print5bitbin(get5bitCorner(top_back_left  )); cout << "\n";
-//        cout << bottom_front_right  << " "; print5bitbin(get5bitCorner(bottom_front_right  )); cout << "\n";
-//        cout << bottom_front_left << " "; print5bitbin(get5bitCorner(bottom_front_left )); cout << "\n";
-//        cout << bottom_back_right << " "; print5bitbin(get5bitCorner(bottom_back_right )); cout << "\n";
-//        cout << bottom_back_left << " "; print5bitbin(get5bitCorner(bottom_back_left )); cout << "\n";
 
         return ret;
     }
